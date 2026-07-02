@@ -92,6 +92,8 @@ run
 **Resultado:**
 <img width="722" height="494" alt="image" src="https://github.com/user-attachments/assets/a8a0c1f2-cd24-41ee-8166-04ac07829ecf" />
 
+<img width="1126" height="292" alt="image" src="https://github.com/user-attachments/assets/4ae39161-eae8-40b1-a1d8-fda072a60ad2" />
+
 <img width="946" height="820" alt="image" src="https://github.com/user-attachments/assets/aa50bb18-6096-42bd-aca5-382ac7202ab3" />
 
 <img width="870" height="748" alt="image" src="https://github.com/user-attachments/assets/7efa289e-e570-4950-9d9e-7c9cf36dce4c" />
