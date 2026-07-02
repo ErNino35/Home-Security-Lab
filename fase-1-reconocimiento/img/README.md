@@ -29,7 +29,6 @@ nmap -sn 192.168.85.0/24
 Detecta qué máquinas están activas en la red sin escanear puertos.
 
 **Resultado:**
-![Escaneo de red]
 (<img width="587" height="309" alt="image" src="https://github.com/user-attachments/assets/6d6c5aca-0fd1-47bd-9295-263da54520ac" />
 )
 
