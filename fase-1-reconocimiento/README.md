@@ -107,11 +107,14 @@ de reconocimiento contra cada puerto. Es el escaneo más completo de Nmap.
 
 **Resultado:**
 
-<img aquí tu enlace captura 1 />
+<img width="1056" height="836" alt="image" src="https://github.com/user-attachments/assets/6ba6f52a-d742-4031-a3b3-5bc85b414f2c" />
 
-<img aquí tu enlace captura 2 />
 
-<img aquí tu enlace captura 3 />
+<img width="1339" height="832" alt="image" src="https://github.com/user-attachments/assets/3a13ce56-745e-4a5a-b415-776be3c02a53" />
+
+
+<img width="983" height="452" alt="image" src="https://github.com/user-attachments/assets/c5ba8237-daf0-47b2-8bfd-8707a20e2bff" />
+
 
 **Hallazgos más importantes:**
 
