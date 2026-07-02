@@ -16,7 +16,7 @@ documentando técnicas de ataque y defensa reales.
 | Windows 10 | Víctima Windows | Pendiente |
 
 ## Fases
-- [ ] Fase 1 — Reconocimiento
+- [x] Fase 1 — Reconocimiento ✅
 - [ ] Fase 2 — Explotación
 - [ ] Fase 3 — Defensa con Wazuh SIEM
 - [ ] Fase 4 — Windows (bonus)
