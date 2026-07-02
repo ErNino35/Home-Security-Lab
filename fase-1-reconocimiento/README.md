@@ -64,12 +64,26 @@ y versión exacta corre en cada puerto abierto.
 | 21 | FTP | vsftpd 2.3.4 | 🔴 Crítico — backdoor conocida |
 | 22 | SSH | OpenSSH 4.7p1 | 🟡 Medio |
 | 23 | Telnet | Linux telnetd | 🔴 Crítico — sin cifrado |
+| 25 | SMTP | Postfix smtpd | 🟡 Medio |
+| 53 | DNS | ISC BIND 9.4.2 | 🟡 Medio |
 | 80 | HTTP | Apache 2.2.8 | 🟡 Medio |
-| 139/445 | SMB | Samba 3.X-4.X | 🔴 Crítico — sin dominio |
+| 111 | RPC | rpcbind 2 | 🟡 Medio |
+| 139 | NetBIOS | Samba 3.X-4.X | 🔴 Crítico |
+| 445 | SMB | Samba 3.X-4.X | 🔴 Crítico — sin dominio |
+| 512 | exec | netkit-rsh rexecd | 🔴 Crítico — sin autenticación |
+| 513 | login | rlogin | 🔴 Crítico — sin autenticación |
+| 514 | shell | Netkit rshd | 🔴 Crítico — sin autenticación |
+| 1099 | Java-RMI | GNU Classpath | 🟡 Medio |
 | 1524 | Bindshell | Root shell | 🔴 Crítico — acceso root directo |
+| 2049 | NFS | 2-4 | 🟡 Medio |
+| 2121 | FTP | ProFTPD 1.3.1 | 🔴 Crítico |
 | 3306 | MySQL | 5.0.51a | 🟡 Medio |
 | 5432 | PostgreSQL | 8.3.0-8.3.7 | 🟡 Medio |
-| 512/513/514 | rsh/rexec | Netkit | 🔴 Crítico — sin autenticación |
+| 5900 | VNC | protocol 3.3 | 🔴 Crítico |
+| 6000 | X11 | access denied | 🟡 Medio |
+| 6667 | IRC | UnrealIRCd | 🔴 Crítico |
+| 8009 | AJP | Apache Jserv | 🟡 Medio |
+| 8180 | HTTP | Apache Tomcat | 🟡 Medio |
 
 **Conclusión:**
 Metasploitable tiene más de 20 puertos abiertos con servicios vulnerables.
