@@ -90,3 +90,47 @@ Metasploitable tiene más de 20 puertos abiertos con servicios vulnerables.
 Los más críticos son vsftpd 2.3.4 (backdoor), el puerto 1524 (shell de root
 directamente accesible) y los servicios rsh antiguos sin autenticación.
 Estos serán los objetivos principales en la Fase 2.
+
+
+---
+
+## 1.3 · Escaneo avanzado (Aggressive Scan)
+
+**Comando:**
+```bash
+nmap -A -T4 192.168.85.129
+```
+
+**¿Qué hace?**
+Combina detección de SO, versiones de servicios y scripts automáticos
+de reconocimiento contra cada puerto. Es el escaneo más completo de Nmap.
+
+**Resultado:**
+
+<img aquí tu enlace captura 1 />
+
+<img aquí tu enlace captura 2 />
+
+<img aquí tu enlace captura 3 />
+
+**Hallazgos más importantes:**
+
+| Hallazgo | Detalle | Riesgo |
+|---|---|---|
+| FTP anónimo | Acceso sin usuario ni contraseña al puerto 21 | 🔴 Crítico |
+| vsftpd 2.3.4 | Versión con backdoor conocida | 🔴 Crítico |
+| UnrealIRCd 3.2.8.1 | Versión con backdoor conocida (puerto 6667) | 🔴 Crítico |
+| MySQL expuesto | Revela versión, protocolo y salt interno | 🔴 Crítico |
+| SMB sin firma | Permite ataques de tipo relay | 🔴 Crítico |
+| PostgreSQL | Certificado SSL caducado desde 2010 | 🟡 Medio |
+| VNC puerto 5900 | Versión antigua con autenticación débil | 🔴 Crítico |
+| RPC lista servicios | Expone servicios internos públicamente | 🟡 Medio |
+| Kernel Linux | Versión 2.6.9-2.6.33 (2004-2009) | 🔴 Crítico |
+| SMB1 únicamente | No soporta SMB2, protocolo obsoleto | 🔴 Crítico |
+
+**Conclusión:**
+El escaneo avanzado confirma múltiples backdoors conocidas (vsftpd, UnrealIRCd),
+servicios que exponen información sensible (MySQL, RPC) y configuraciones
+peligrosas (SMB sin firma, FTP anónimo, certificados caducados).
+El sistema operativo es un kernel de Linux extremadamente desactualizado.
+La máquina está lista para ser explotada en la Fase 2.
