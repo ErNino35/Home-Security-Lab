@@ -54,7 +54,8 @@ y versión exacta corre en cada puerto abierto.
 
 **Resultado:**
 
-<img aqui tu enlace de github />
+<img width="995" height="647" alt="image" src="https://github.com/user-attachments/assets/dea72c5f-4dd3-41ba-a1d8-b0fd88415305" />
+
 
 **Servicios destacados encontrados:**
 
