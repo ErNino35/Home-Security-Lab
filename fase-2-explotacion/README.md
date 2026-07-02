@@ -21,36 +21,26 @@ como Metasploit Framework para conseguir acceso a la máquina víctima.
 
 **Herramienta:** Netcat (nc)
 
-**Comando:**
-```bash
-nc 192.168.85.129 1524
-```
-
-
-<img width="688" height="313" alt="image" src="https://github.com/user-attachments/assets/698538a7-8c2d-4f0f-9b4b-ae01e8720acb" />
-
-
-
 **¿Qué es una bindshell?**
 Una bindshell es una terminal que está escuchando en un puerto esperando
 que alguien se conecte. En este caso está en el puerto 1524 con permisos
 de root — cualquiera que se conecte tiene control total de la máquina
 sin necesitar usuario ni contraseña.
 
+**Comando:**
+```bash
+nc 192.168.85.129 1524
+```
+
 **Resultado:**
+
+<img width="688" height="313" alt="image" src="https://github.com/user-attachments/assets/698538a7-8c2d-4f0f-9b4b-ae01e8720acb" />
 
 <img width="255" height="34" alt="image" src="https://github.com/user-attachments/assets/9062f850-0025-4d2d-9133-e07997e3bbf2" />
 
-
-
-
 <img width="635" height="610" alt="image" src="https://github.com/user-attachments/assets/bc21a9ff-46f4-43b8-99d0-6d37d61099c3" />
 
-
-
-
 <img width="600" height="742" alt="image" src="https://github.com/user-attachments/assets/dbcd1fe2-c358-4274-a21b-a66aaa7b08a3" />
-
 
 **Acceso conseguido:**
 - Usuario: root (administrador total)
@@ -64,7 +54,6 @@ existir. La solución es cerrar ese puerto con el firewall y auditar
 regularmente los puertos abiertos del sistema.
 
 ---
-
 
 ## 2.2 · vsftpd 2.3.4 Backdoor — Metasploit
 
@@ -90,6 +79,7 @@ run
 ```
 
 **Resultado:**
+
 <img width="722" height="494" alt="image" src="https://github.com/user-attachments/assets/a8a0c1f2-cd24-41ee-8166-04ac07829ecf" />
 
 <img width="1126" height="292" alt="image" src="https://github.com/user-attachments/assets/4ae39161-eae8-40b1-a1d8-fda072a60ad2" />
@@ -98,10 +88,7 @@ run
 
 <img width="870" height="748" alt="image" src="https://github.com/user-attachments/assets/7efa289e-e570-4950-9d9e-7c9cf36dce4c" />
 
-<img aquí captura del exploit />
-
 <img width="408" height="160" alt="image" src="https://github.com/user-attachments/assets/965b00b4-d8f1-45d0-aee2-fdf733c3e1c7" />
-
 
 **Acceso conseguido:**
 - Usuario: root
