@@ -42,7 +42,11 @@ sin necesitar usuario ni contraseña.
 <img width="255" height="34" alt="image" src="https://github.com/user-attachments/assets/9062f850-0025-4d2d-9133-e07997e3bbf2" />
 
 
+
+
 <img width="635" height="610" alt="image" src="https://github.com/user-attachments/assets/bc21a9ff-46f4-43b8-99d0-6d37d61099c3" />
+
+
 
 
 <img width="600" height="742" alt="image" src="https://github.com/user-attachments/assets/dbcd1fe2-c358-4274-a21b-a66aaa7b08a3" />
