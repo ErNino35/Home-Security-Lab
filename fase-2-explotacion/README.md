@@ -134,7 +134,11 @@ Por eso el LHOST es imprescindible.
 
 **Resultado:**
 
-<img aquí tu captura />
+<img width="885" height="325" alt="image" src="https://github.com/user-attachments/assets/a9f713a1-41e5-457c-8066-30dc631b1adc" />
+
+
+<img width="1170" height="552" alt="image" src="https://github.com/user-attachments/assets/e545cc5f-a386-48d6-836a-8c9d3cedbe76" />
+
 
 **Acceso conseguido:**
 - Usuario: root
