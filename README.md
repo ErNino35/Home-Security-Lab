@@ -17,7 +17,7 @@ documentando técnicas de ataque y defensa reales.
 
 ## Fases
 - [x] Fase 1 — Reconocimiento ✅
-- [ ] Fase 2 — Explotación
+- [x] Fase 2 — Explotación
 - [ ] Fase 3 — Defensa con Wazuh SIEM
 - [ ] Fase 4 — Windows (bonus)
 
