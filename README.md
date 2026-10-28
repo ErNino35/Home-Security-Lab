@@ -19,7 +19,7 @@ documentando técnicas de ataque y defensa reales.
 - [x] Fase 1 — Reconocimiento ✅
 - [x] Fase 2 — Explotación ✅
 - [ ] Fase 3 — Defensa con Wazuh SIEM
-- [ ] Fase 4 — Windows (bonus)
+- [ ] Fase 4 — Windows
 
 ## Herramientas
 Nmap · Metasploit · Wireshark · Wazuh · VMware Workstation Pro
